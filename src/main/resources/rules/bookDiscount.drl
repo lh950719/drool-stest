@@ -1,0 +1,86 @@
+//图书优惠规则
+package book.Discount
+import com.cmb.Order
+//global定义全局变量
+//function 定义函数
+//query定义查询
+/*//规则 1 所购图书在总价100元以下没有优惠
+rule "book_discount_1"
+    when
+        $order:Order(originlPrice < 100d) //模式匹配 到规则引擎中(规则内存) 查找order对象
+
+    then
+        $order.setRealPrice($order.getOriginlPrice());
+        System.out.println("成功匹配到规则一");
+
+    end
+
+
+//规则2 所购图书总价在100到200之间优惠20元
+rule "book_discount_2"
+    when
+        $order:Order(originlPrice >= 100d && originlPrice <= 200d )
+    then
+        $order.setRealPrice($order.getOriginlPrice()-20d );
+        System.out.println("成功匹配到规则二");
+     end
+
+//规则3 所购图书总价在200到300之间优惠50元
+rule "book_discount_3"
+    when
+        $order:Order(originlPrice >= 200d && originlPrice <= 300d )
+    then
+        $order.setRealPrice($order.getOriginlPrice()-50d );
+        System.out.println("成功匹配到规则三");
+     end
+
+//规则4 所购图书总价300元优惠100
+rule "book_discount_4"
+    when
+        $order:Order(originlPrice >=300d)
+
+    then
+        $order.setRealPrice($order.getOriginlPrice()-100d);
+        System.out.println("成功匹配到规则四");
+     end*/
+//规则 1 所购图书在总价100元以下没有优惠
+rule "book_discount_1"
+
+//attributes 规则属性 可选项
+    when//条件部分
+        $order:Order(originlPrice < 100d) //模式匹配 到规则引擎中(规则内存) 查找order对象
+
+    then//结果部分
+        $order.setRealPrice($order.getOriginlPrice());
+        System.out.println("成功匹配到规则一");
+
+    end
+
+
+//规则2 所购图书总价在100到200之间优惠20元
+rule "book_discount_2"
+    when
+        $order:Order(originlPrice >= 100d && originlPrice <= 200d )
+    then
+        $order.setRealPrice($order.getOriginlPrice()-20d );
+        System.out.println("成功匹配到规则二");
+     end
+
+//规则3 所购图书总价在200到300之间优惠50元
+rule "book_discount_3"
+    when
+        $order:Order(originlPrice >= 200d && originlPrice <= 300d )
+    then
+        $order.setRealPrice($order.getOriginlPrice()-50d );
+        System.out.println("成功匹配到规则三");
+     end
+
+//规则4 所购图书总价300元优惠100
+rule "book_discount_4"
+    when
+        $order:Order(originlPrice >=300d)
+
+    then
+        $order.setRealPrice($order.getOriginlPrice()-100d);
+        System.out.println("成功匹配到规则四");
+     end

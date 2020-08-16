@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="myKbase1" packages="com.cmb" default="true">
+        <!--
+            name:指定kbase的名称，可以任意，但是需要
+            packages：指定规则文件目录，需要根据实际情况填写，否则无法加载到配置文件
+            default：指定当前kbase是否为默认
+        -->
+
+
+        <!-- kession 指的是会话对象-->
+       <ksession name="ksession-rule" default="true"></ksession>
+        <!--
+            name:指定kession名称，可以任意但是需要唯一
+            default：指定当前session是否为默认
+        -->
+    </kbase>
+
+</kmodule>
